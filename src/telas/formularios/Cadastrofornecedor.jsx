@@ -1,10 +1,7 @@
-
-
-
 import { useState } from 'react';
 import { Button, Col, Form, InputGroup, Row, Alert } from 'react-bootstrap';
 
-export default function CadastroCliente() {
+export default function Cadastrofornecedor() {
     const [validado, setValidado] = useState(false);
     const [cadastroSucesso, setCadastroSucesso] = useState(false);
 
@@ -33,7 +30,7 @@ export default function CadastroCliente() {
 
     return (
         <div>
-            <h3>Formulário de Cadastro de Cliente</h3>
+            <h3>Formulário de Cadastro de Fornecedores</h3>
 
             {cadastroSucesso && (
                 <Alert variant="success">Cadastro concluído com sucesso!</Alert>
@@ -42,29 +39,29 @@ export default function CadastroCliente() {
             <Form id="form-cadastro" noValidate validated={validado} onSubmit={manipularSubmissao}>
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4">
-                        <Form.Label>Nome</Form.Label>
-                        <Form.Control required type="text" placeholder="Nome" />
-                        <Form.Control.Feedback type="invalid">Informe o Nome do cliente</Form.Control.Feedback>
+                        <Form.Label>Nome Fantasia </Form.Label>
+                        <Form.Control required type="text" placeholder="Nome Fantasia" />
+                        <Form.Control.Feedback type="invalid">Informe o Nome Fantasia da Empresa</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="4">
-                        <Form.Label>Sobrenome</Form.Label>
-                        <Form.Control required type="text" placeholder="Sobrenome" />
-                        <Form.Control.Feedback type="invalid">Informe o Sobrenome do cliente</Form.Control.Feedback>
+                        <Form.Label>razão Social</Form.Label>
+                        <Form.Control required type="text" placeholder="Razão" />
+                        <Form.Control.Feedback type="invalid">Informe a Razão social </Form.Control.Feedback>
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} md="6">
-                        <Form.Label>Sexo</Form.Label>
-                        <Form.Control required type="text" placeholder="Sexo" />
-                        <Form.Control.Feedback type="invalid">Por favor, insira o sexo do cliente.</Form.Control.Feedback>
+                        <Form.Label>CNPJ</Form.Label>
+                        <Form.Control required type="text" placeholder="CNPJ" />
+                        <Form.Control.Feedback type="invalid">Por favor, insira o CNPJ da Empresa.</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="6">
-                        <Form.Label>Data de Nascimento</Form.Label>
-                        <Form.Control required type="date" />
-                        <Form.Control.Feedback type="invalid">Por favor, insira a data de nascimento.</Form.Control.Feedback>
+                        <Form.Label>Telefone</Form.Label>
+                        <Form.Control required type="text" />
+                        <Form.Control.Feedback type="invalid">Por favor, insira o Telefone da Empresa.</Form.Control.Feedback>
                     </Form.Group>
                 </Row>
 
@@ -87,16 +84,23 @@ export default function CadastroCliente() {
 
                 <Row className="mb-3">
                     <Form.Group as={Col} md="3">
-                        <Form.Label>Estado Civil</Form.Label>
-                        <Form.Control required type="text" placeholder="Estado Civil" />
-                        <Form.Control.Feedback type="invalid">Por favor, informe o estado civil.</Form.Control.Feedback>
+                        <Form.Label>Banco</Form.Label>
+                        <Form.Control required type="text" placeholder="Banco" />
+                        <Form.Control.Feedback type="invalid">Por favor, informe qual o Banco utilizado pela Empresa.</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="3">
-                        <Form.Label>RG</Form.Label>
-                        <Form.Control required type="text" placeholder="RG" />
-                        <Form.Control.Feedback type="invalid">Por favor, informe o RG.</Form.Control.Feedback>
+                        <Form.Label>agência</Form.Label>
+                        <Form.Control required type="text" placeholder="agência" />
+                        <Form.Control.Feedback type="invalid">Por favor, informe a agência.</Form.Control.Feedback>
                     </Form.Group>
+
+                    <Form.Group as={Col} md="3">
+                        <Form.Label>Conta</Form.Label>
+                        <Form.Control required type="text" placeholder="Conta" />
+                        <Form.Control.Feedback type="invalid">Por favor, informe a Conta.</Form.Control.Feedback>
+                    </Form.Group>
+
                 </Row>
 
                 <Form.Group className="mb-3">

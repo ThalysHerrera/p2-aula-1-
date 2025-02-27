@@ -1,10 +1,7 @@
-
-
-
 import { useState } from 'react';
 import { Button, Col, Form, InputGroup, Row, Alert } from 'react-bootstrap';
 
-export default function CadastroCliente() {
+export default function Cadastroprodutos() {
     const [validado, setValidado] = useState(false);
     const [cadastroSucesso, setCadastroSucesso] = useState(false);
 
@@ -33,7 +30,7 @@ export default function CadastroCliente() {
 
     return (
         <div>
-            <h3>Formulário de Cadastro de Cliente</h3>
+            <h3>Formulário de Cadastro de Produtos</h3>
 
             {cadastroSucesso && (
                 <Alert variant="success">Cadastro concluído com sucesso!</Alert>
@@ -42,61 +39,62 @@ export default function CadastroCliente() {
             <Form id="form-cadastro" noValidate validated={validado} onSubmit={manipularSubmissao}>
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4">
-                        <Form.Label>Nome</Form.Label>
-                        <Form.Control required type="text" placeholder="Nome" />
-                        <Form.Control.Feedback type="invalid">Informe o Nome do cliente</Form.Control.Feedback>
+                        <Form.Label>Nome do produto </Form.Label>
+                        <Form.Control required type="text" placeholder="Nome do produto" />
+                        <Form.Control.Feedback type="invalid">Informe o Nome do produto</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="4">
-                        <Form.Label>Sobrenome</Form.Label>
-                        <Form.Control required type="text" placeholder="Sobrenome" />
-                        <Form.Control.Feedback type="invalid">Informe o Sobrenome do cliente</Form.Control.Feedback>
+                        <Form.Label>Marca</Form.Label>
+                        <Form.Control required type="text" placeholder="Marca" />
+                        <Form.Control.Feedback type="invalid">Informe a Marca do produto </Form.Control.Feedback>
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} md="6">
-                        <Form.Label>Sexo</Form.Label>
-                        <Form.Control required type="text" placeholder="Sexo" />
-                        <Form.Control.Feedback type="invalid">Por favor, insira o sexo do cliente.</Form.Control.Feedback>
+                        <Form.Label>Codigo de Barras</Form.Label>
+                        <Form.Control required type="text" placeholder="Codigo de Barras" />
+                        <Form.Control.Feedback type="invalid">Por favor, insira o Codigo de Barras.</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="6">
-                        <Form.Label>Data de Nascimento</Form.Label>
-                        <Form.Control required type="date" />
-                        <Form.Control.Feedback type="invalid">Por favor, insira a data de nascimento.</Form.Control.Feedback>
+                        <Form.Label>Quantidade</Form.Label>
+                        <Form.Control required type="text" />
+                        <Form.Control.Feedback type="invalid">Por favor, insira a Quantidade do produto.</Form.Control.Feedback>
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} md="4">
-                        <Form.Label>Email</Form.Label>
-                        <InputGroup hasValidation>
-                            <InputGroup.Text>@</InputGroup.Text>
-                            <Form.Control required type="email" placeholder="Email" />
-                            <Form.Control.Feedback type="invalid">Por favor, informe o email.</Form.Control.Feedback>
-                        </InputGroup>
+                        <Form.Label>Preço de Custo</Form.Label>
+                     
+                            <Form.Control required type="text" placeholder="Preço de Custo" />
+                            <Form.Control.Feedback type="invalid">Por favor, informe o Preço de Custo.</Form.Control.Feedback>
+                       
                     </Form.Group>
 
                     <Form.Group as={Col} md="6">
-                        <Form.Label>Endereço Completo</Form.Label>
-                        <Form.Control required type="text" placeholder="Endereço" />
-                        <Form.Control.Feedback type="invalid">Por favor, insira o endereço completo.</Form.Control.Feedback>
+                        <Form.Label>Preço de Venda</Form.Label>
+                        <Form.Control required type="text" placeholder="Preço de Venda" />
+                        <Form.Control.Feedback type="invalid">Por favor, insira o Preço de Venda.</Form.Control.Feedback>
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} md="3">
-                        <Form.Label>Estado Civil</Form.Label>
-                        <Form.Control required type="text" placeholder="Estado Civil" />
-                        <Form.Control.Feedback type="invalid">Por favor, informe o estado civil.</Form.Control.Feedback>
+                        <Form.Label>Categoria</Form.Label>
+                        <Form.Control required type="text" placeholder="categoria" />
+                        <Form.Control.Feedback type="invalid">Por favor, informe qual a categoria do produto.</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} md="3">
-                        <Form.Label>RG</Form.Label>
-                        <Form.Control required type="text" placeholder="RG" />
-                        <Form.Control.Feedback type="invalid">Por favor, informe o RG.</Form.Control.Feedback>
+                        <Form.Label>Validade</Form.Label>
+                        <Form.Control required type="text" placeholder="Validade" />
+                        <Form.Control.Feedback type="invalid">Por favor, informe a Validade.</Form.Control.Feedback>
                     </Form.Group>
+
+                    
                 </Row>
 
                 <Form.Group className="mb-3">
