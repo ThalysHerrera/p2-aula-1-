@@ -30,7 +30,7 @@ export default function Cadastroprodutos() {
 
     return (
         <div>
-            <h3>Formulário de Cadastro de Produtos</h3>
+           <Alert className="text-center"><h2>Cadastro de Produtos</h2></Alert>
 
             {cadastroSucesso && (
                 <Alert variant="success">Cadastro concluído com sucesso!</Alert>

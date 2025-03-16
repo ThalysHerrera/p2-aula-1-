@@ -30,7 +30,7 @@ export default function Cadastrofornecedor() {
 
     return (
         <div>
-            <h3>Formulário de Cadastro de Fornecedores</h3>
+          <Alert className="text-center"><h2>Cadastro de Fornecedores</h2></Alert>
 
             {cadastroSucesso && (
                 <Alert variant="success">Cadastro concluído com sucesso!</Alert>
