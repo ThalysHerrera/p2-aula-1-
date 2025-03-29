@@ -23,6 +23,7 @@ export default function Formlogin(props) {
                 Usuario: UsuarioInformado,
                 logado: true
             });
+            
             alert("Login realizado com sucesso!");
         } else {
             alert("Usuário ou senha estão incorretos.");
@@ -30,8 +31,8 @@ export default function Formlogin(props) {
     }
 
     return (
-        <div className="login-container">
-            <Container className=" d-flex justify-content-center align-items-center vh-100 ">
+        <div  className="login-container ">
+            <Container className=" d-flex justify-content-center align-items-center vh-10">
                 <Card className="p-5  shadow-lg w-5 text-white bg-dark bg-opacity-75">
                     <h2 className="text-center mb-4">Login</h2>
                     <Form className="mt-3" onSubmit={verificaCredenciais}> 

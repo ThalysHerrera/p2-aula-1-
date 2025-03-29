@@ -4,6 +4,9 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// const cors = require('cors');
+// app.use(cors());
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
