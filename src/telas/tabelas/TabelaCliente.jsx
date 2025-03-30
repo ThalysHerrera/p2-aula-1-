@@ -47,12 +47,7 @@ export default function TabelaCliente(props) {
                             <td>{cliente.cidade?.nome}/{cliente.cidade?.estado}</td>
                             <td>
                                 <Button onClick={() => selecionarClienteParaEdicao(cliente)} variant="warning" className="me-2">Editar</Button>
-                                <Button variant="danger" onClick={() => {
-                                    if (window.confirm(`Deseja realmente excluir o cliente ${cliente.nome}?`))
-                                        props.setListaDeclientes(prevClientes => prevClientes.filter(c => c.cpf !== cliente.cpf));
-                                }}>
-                                    Excluir
-                                </Button>
+                             
                             </td>
                         </tr>
                     ))}
@@ -61,3 +56,16 @@ export default function TabelaCliente(props) {
         </Container>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

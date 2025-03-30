@@ -46,4 +46,4 @@ const clientes = [
     }
 ];
 
-export default clientes;
+module.exports = clientes;
